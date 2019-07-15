@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Java Script Page</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+<script>
+
+      
+      function validate(form) {
+
+        var x, text;
+      
+      // Get the value of the input field with id="numb"
+      x = document.getElementById("contactno").value;
+    
+      // If x is Not a Number or less than one or greater than 10
+      if (isNaN(x) || x < 1000000000 || x > 99999999999) {
+          alert("Please provide a Valid Contact Number");
+      } else {
+        alert('Form Submited Successfully');
+      }
+
+
+}</script>
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+  <div id="container">
+    <div id="header">
+        <div id="icon">
+            <div id="headleft">
+                <a id="headTitle"><b> RD PORTAL</b></a>
+            </div>
+            <div id="headright">
+                    <a id="headR1"><b> REPORTS</b></a>
+                    <a id="headR1"><b> ADMIN</b></a>
+                    <a id="headR1"><b> HELP</b></a>
+                    <a id="headR2"><b> Welcome </b></a>
+                   
+            </div>
+            
+            <img id="usericon" src="css/1.jpg" />
+        </div>
+    </div>
+
+    <form onsubmit="return validate(this);" class="user-form">
+        <table>
+            <tr>
+                <td colspan=3>
+                    <h3>User Creation</h3>
+                    <hr/>						
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fname">Email</label>
+                    <input required type="email" id="fname" name="email">
+                </td>
+                <td>
+                    <label for="roleid">RoleId</label>
+                    <select id="roleid" required name="roleid">
+                            <option disabled selected value> -- select a Role -- </option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="fname">First Name</label>
+                    <input required type="text" id="fname" name="firstname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lname">Last Name</label>
+                    <input required type="text" id="lname" name="lastname">
+                </td>
+                <td>
+                    <label for="genderid">GenderId</label>
+                    <select required id="genderid" name="genderid">
+                            <option disabled selected value> -- select a Gender -- </option>
+                          <option value="2">Male</option>
+                          <option value="3">Female</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="contactno">Contact No</label>
+                    <input required type="text" id="contactno" name="contactno">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Create">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#">Back to List</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <div id="footer">
+
+        <div>
+            <a id="headleft" class="footerTextR">
+                    RD-Pre Education version: 7.1.026, Node2
+            </a>
+            <a id="headleft" class="footerTextL">
+                    Help
+            </a>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
